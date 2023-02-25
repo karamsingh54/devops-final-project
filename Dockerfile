@@ -8,6 +8,5 @@ RUN unzip fiu.zip
 RUN rm -rf fiu.zip &&\
       cp -rf html/* . &&\
       rm -rf html
-    mkdir /var/www/html/secure  
 EXPOSE 80
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
